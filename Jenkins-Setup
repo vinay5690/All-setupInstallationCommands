@@ -12,3 +12,7 @@ systemctl status jenkins
 -->how to delete below installations  
 yum remove Jenkins
 sudo yum remove java-21-amazon-corretto
+
+to check jenkins gui dashboard
+publicip of server + 8080 port 
+
