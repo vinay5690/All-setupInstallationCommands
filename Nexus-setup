@@ -8,5 +8,6 @@ cd /opt
 ll
 cd (file) 
 cd bin
+ll
 ./nexus start
 then access it with public ip + 8081
