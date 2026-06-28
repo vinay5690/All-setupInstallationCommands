@@ -1,1 +1,12 @@
-
+cd /opt
+Search in google -->Install Self-Hosted Nexus Repository  -->downlaod nexus repository using -->wget https://download.sonatype.com/nexus/3/nexus-3.93.2-01-linux-x86_64.tar.gz
+tar -zxvf (file) (Untar/Unzip the file)
+adduser vinay or rajesh or flm etc,.. 
+change owner-->chown flm:flm nexus-3.93.2-01 sonatype-work/   (change users for nexus file and sonatype file )
+su - flm     switch to user
+cd /opt
+ll
+cd (file) 
+cd bin
+./nexus start
+then access it with public ip + 8081
