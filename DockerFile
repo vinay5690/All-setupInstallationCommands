@@ -1,0 +1,1 @@
+yumm install docker -y && systemctl start docker    // we can run both commands at a time 
