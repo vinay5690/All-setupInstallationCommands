@@ -6,8 +6,7 @@ docker ps    //
 docker ps -a // it will show the current how many server up/down
 
 
-
-
-
-
-
+###1st -Dockerfile
+FROM ubuntu  // it will install the OS in container
+MAINTAINER name vinay 
+LABEL    // this is my first docker file we can write descriton using label command 
