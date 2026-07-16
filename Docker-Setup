@@ -2,7 +2,7 @@
 2.vim Dockerfile  // create Docker file with same name which have given in command 
 3.docker build -t myimage .         // . --> current directory the whole commmand will create the image  here " t " is nothing but tag name 
 4.docker run -itd --name cont1 myimage  or docker run -d --name cont1 myimage     // this command create the container after running this command here it menas interactive terminal 
-for operating system(ubuntu,) redhat related we need interative terminal Iid)
+for operating system(ubuntu,) redhat related we need interative terminal itd)
 5.docker ps    // 
 6.docker ps -a // it will show the current how many server up/down
 
@@ -18,6 +18,8 @@ docker exec -it cont1 bash // using this we can go to the mentioned container
 
 cat /etc/os-release // it will display which operating sysytem is runnning on our container 
 <None> state images we can call in techinally dangling images  it means it doesn't delete the images but it goes to none state
+
+Control+d or exit // it will exit from container 
 
 
 
