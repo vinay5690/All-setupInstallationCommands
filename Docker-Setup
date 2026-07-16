@@ -1,12 +1,16 @@
-yum install docker -y && systemctl start docker    // we can run both commands at a time
-vim Dockerfile  // create Docker file with same name which have given in command 
-docker build -t myimage .         // . --> current directory the whole commmand will create the image
-docker run -d --name cont1 myimage      // this command create the container after running this command
-docker ps    // 
-docker ps -a // it will show the current how many server up/down
+1.yum install docker -y && systemctl start docker    // we can run both commands at a time
+2.vim Dockerfile  // create Docker file with same name which have given in command 
+3.docker build -t myimage .         // . --> current directory the whole commmand will create the image  here " t " is nothing but tag name 
+4.docker run -itd --name cont1 myimage  or docker run -d --name cont1 myimage     // this command create the container after running this command here it menas interactive terminal 
+for operating system(ubuntu,) redhat related we need interative terminal Iid)
+5.docker ps    // 
+6.docker ps -a // it will show the current how many server up/down
 
 
 ###1st -Dockerfile
 FROM ubuntu  // it will install the OS in container
 MAINTAINER name vinay 
 LABEL    // this is my first docker file we can write descriton using label command 
+
+docker images   //  it will show images in docker 
+
