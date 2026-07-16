@@ -1,5 +1,5 @@
 yum install docker -y && systemctl start docker    // we can run both commands at a time
-vim Dockerfile  // create Docker file with same as it as
+vim Dockerfile  // create Docker file with same name which have given in command 
 docker build -t myimage .         // . --> current directory the whole commmand will create the image
 docker run -d --name cont1 myimage      // this command create the container after running this command
 docker ps    // 
