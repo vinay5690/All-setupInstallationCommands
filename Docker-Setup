@@ -14,10 +14,10 @@ LABEL    // this is my first docker file we can write descriton using label comm
 
 docker images   //  it will show images in docker 
 
-docker exec -it cont1 bash // using this we can go to the mentioned container 
+docker exec -it cont1 bash or sh// using this we can go to the mentioned container 
 
 cat /etc/os-release // it will display which operating sysytem is runnning on our container 
-<None> state images we can call in techinally dangling images  it means it doesn't delete the images but it goes to none state
+<None> state images we can call in techinally as dangling images  it means it doesn't delete the images but it goes to none state
 
 Control+d or exit // it will exit from container 
 
