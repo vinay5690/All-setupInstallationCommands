@@ -1,0 +1,6 @@
+docker run -d --name sonar -p 1234:9000 sonarqube:lts-community
+
+
+
+1234 :hostport --> /we can give as our wish
+9000:container port -->fixed
