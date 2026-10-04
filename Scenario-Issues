@@ -1,0 +1,8 @@
+1.Maven 3.10 Build Failure Due to JUnit Compatibility
+Resoltion:-
+The project was using JUnit 4.10 in pom.xml. Maven 3.10 resolved a newer Maven Surefire Plugin (3.6.0), which no longer supports JUnit 4.10.
+Resolution: Updated the JUnit version in pom.xml from:
+<junit.version>4.10</junit.version>     changed to  <junit.version>4.13.2</junit.version>
+
+=============================================================================================
+2. 
