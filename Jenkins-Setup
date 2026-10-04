@@ -1,6 +1,6 @@
-Here what i wanted to say is --java-17 is not working so please use java-21
+Here what i wanted to say is --java-21 is not working so please use java-25
 
-yum install java-21-amazon-corretto -y
+yum install java-25-amazon-corretto -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/rpm-stable/jenkins.repo
 yum install jenkins -y
