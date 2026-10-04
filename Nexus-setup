@@ -6,7 +6,7 @@ change owner-->chown -R flm:flm nexus-3.93.2-01 sonatype-work/   (change users f
 su - flm     switch to user
 cd /opt
 ll
-cd (file) 
+cd nexus-3.93.2-01
 cd bin
 ll
 ./nexus start
