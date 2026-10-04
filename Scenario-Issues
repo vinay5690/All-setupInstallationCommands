@@ -5,4 +5,26 @@ Resolution: Updated the JUnit version in pom.xml from:
 <junit.version>4.10</junit.version>     changed to  <junit.version>4.13.2</junit.version>
 
 =============================================================================================
-2. 
+2. No plugin found for prefix 'sonar'
+
+In pom.xml we must add below plugin when perming sonar anlysis using maven.
+The plugin is required only for Maven-based Sonar analysis.
+<plugin>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>5.2.0.4988</version>
+</plugin>
+
+The Sonar Maven Plugin is required only when SonarQube analysis is executed through Maven using the sonar:sonar goal.
+If a standalone Sonar Scanner is used, code quality analysis
+can be performed without adding the plugin to the pom.xml. In my case, Jenkins was executing mvn sonar:sonar,
+so Maven needed the Sonar Maven Plugin to recognize and execute the Sonar analysis goal.
+
+
+
+
+
+
+
+
+
