@@ -1,4 +1,4 @@
-we must ustall java 21 other for Other java versions we have to take other nexus tar file 
+we must ustall java 21 for Other java versions  if you want to install we have to take  download other nexus tar file rather than below 
 cd /opt
 Search in google -->Install Self-Hosted Nexus Repository  -->downlaod nexus repository using -->wget https://download.sonatype.com/nexus/3/nexus-3.93.2-01-linux-x86_64.tar.gz
 tar -zxvf (file) (Untar/Unzip the file)
