@@ -4,3 +4,9 @@ docker run -d --name sonar -p 1234:9000 sonarqube:lts-community
 
 1234 :hostport --> /we can give as our wish
 9000:container port -->fixed
+
+Quick Note: Fixing SonarQube IP in Jenkins After Server RestartWhy it breaks:
+When you restart your AWS EC2 server,
+it gets a new Public IP.How to fix it:Copy your new Public IP from the AWS EC2 Console. 
+Go to Jenkins ➔ Manage Jenkins ➔ System (Configure System)
+.Find the SonarQube servers section.Update the Server URL with the new IP (e.g., http://<NEW_IP>:1234).Click Save.
