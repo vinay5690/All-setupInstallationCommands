@@ -1,1 +1,12 @@
+Kops-Installation Command :-go to b broweser and type install kops there will get below command just copy and past in our server
+Command :-curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+chmod +x kops
+sudo mv kops /usr/local/bin/kops
 
+Kubectl-Installation Command :-Go to browser and type install kubectl there select linux then u will get a command below just copy and past in our server 
+Command:-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+Manual Creation for cluster:-
+kops create cluster --name mustafa.k8s.local --zones=us-east-2a,us-east-2b --master-size=c7i-flex.large --master-count=1 --master-volume-size=20 --node-size=t3.micro --node-count=2 --node-volume-size=20 --image=ami-0fe18bc3cfa53a248
+
+Using Yaml file creating Cluster:-
