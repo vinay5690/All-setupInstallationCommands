@@ -10,6 +10,8 @@ Command:-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/rele
 chmod +x kubectl
 mv kubectl /usr/local/bin
 
+export KOPS_STATE_STORE=s3://vinay.devops77flm   //Storing created cluster for backup
+
 
 Manual Creation for cluster:-
 kops create cluster --name mustafa.k8s.local --zones=us-east-2a,us-east-2b --master-size=c7i-flex.large --master-count=1 --master-volume-size=20 --node-size=t3.micro --node-count=2 --node-volume-size=20 --image=ami-0fe18bc3cfa53a248
