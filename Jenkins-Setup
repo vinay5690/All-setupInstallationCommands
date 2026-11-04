@@ -6,6 +6,7 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo \
 yum install jenkins -y
 systemctl start jenkins
 systemctl status jenkins
+systemctl enable jenkins
 
 -->to check version of java -->java -version
 
