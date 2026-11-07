@@ -1,0 +1,4 @@
+$ curl -L https://istio.io/downloadIstio | sh -
+$ cd istio-1.31.4
+$ export PATH=$PWD/bin:$PATH
+istioctl install --set profile=demo -y
