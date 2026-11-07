@@ -1,3 +1,4 @@
+kubectl label namespace default istio-injection=enabled  //to get the envoy container in every pod
 $ curl -L https://istio.io/downloadIstio | sh -
 $ cd istio-1.31.4
 $ export PATH=$PWD/bin:$PATH
