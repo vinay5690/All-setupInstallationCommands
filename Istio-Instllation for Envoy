@@ -12,3 +12,9 @@ Under Init Containers:(The below Options should present inside pod)
 istio-init:
 istio-proxy:
 
+
+sample Application to deploy:-
+cd (change the directory to the generated file) 
+kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+
+
