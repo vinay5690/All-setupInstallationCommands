@@ -5,3 +5,10 @@ cd (change the directory to the generated file)
 export PATH=$PWD/bin:$PATH
 cd
 istioctl install --set profile=demo -y  // to start instio we need to run this command 
+
+
+How to identify envoy container easily :-when u describe the pod you will see below 
+Under Init Containers:(The below Options should present inside pod)
+istio-init:
+istio-proxy:
+
