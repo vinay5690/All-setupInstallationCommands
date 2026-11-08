@@ -1,6 +1,7 @@
 kubectl label namespace default istio-injection=enabled  //to get the envoy container in every pod
-export ISTIO_VERSION=1.24.1
+export ISTIO_VERSION=give latest version here (ask chatgpt for istio version)
 curl -L https://istio.io/downloadIstio | sh -
-cd istio-1.31.4
+cd (change the directory to the generated file) 
 export PATH=$PWD/bin:$PATH
+cd
 istioctl install --set profile=demo -y  // to start instio we need to run this command 
