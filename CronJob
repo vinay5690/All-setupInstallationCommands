@@ -4,7 +4,7 @@ kind: CronJob
 metadata:
   name: demo-job
 spec:
-  schedule: "* * * * *"
+  schedule: "* * * * *"   //evry minute the new pod will schedule once the running pod completed
   jobTemplate:
     spec:
       template:
@@ -17,3 +17,7 @@ spec:
 
 
 kubectl create -f cronjob.yml
+
+How to delete completed pods  
+kubectl delete pod --field-selector=status.phase==Succeeded            // completed keyword will not wrok in place of Succeeded
+
