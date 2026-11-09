@@ -1,10 +1,21 @@
 Downloads and deploys the NGINX Ingress Controller manifests into your Kubernetes cluster use below command.
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
 
+
+Clone the repo
+https://github.com/mustafaprojectsindevops/kubernetes.git
+kubectl apply -f .  // here deployment and svc  get created  // in service yml give clusterip type of service
+so that ingress dns will connect to cluster IP and Ingress DNS expose our services  to internet based on routing
+
+you will see DNS generated here :-kubectl get ing
+
 Check for Ingress Pods (Across all namespaces)
 kubectl get pods --all-namespaces | grep -i ingress
 
 Check for Ingress Services
 kubectl get svc --all-namespaces | grep -i ingress
-will see DNS generated here 
+
+
+
+
 
