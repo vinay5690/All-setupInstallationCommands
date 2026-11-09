@@ -1,0 +1,10 @@
+Downloads and deploys the NGINX Ingress Controller manifests into your Kubernetes cluster use below command.
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
+
+Check for Ingress Pods (Across all namespaces)
+kubectl get pods --all-namespaces | grep -i ingress
+
+Check for Ingress Services
+kubectl get svc --all-namespaces | grep -i ingress
+will see DNS generated here 
+
