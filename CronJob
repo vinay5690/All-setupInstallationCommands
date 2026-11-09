@@ -1,0 +1,19 @@
+create yml file for cronjob
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: demo-job
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - image: nginx
+              name: cont1
+              command: ["/bin/bash", "-c", "sudo apt update -y; sleep 20"]
+          restartPolicy: Never
+
+
+kubectl create -f cronjob.yml
