@@ -1,4 +1,4 @@
-Here what i wanted to say is --java-21 is not working so please use java-25
+Here what i wanted to say is --java-21 
 
 yum install java-21-amazon-corretto -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
