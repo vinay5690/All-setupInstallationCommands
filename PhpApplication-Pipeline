@@ -1,0 +1,50 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('code') {
+            steps {
+                git "https://github.com/vinay5690/ltibbhackathon.git"
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    def scannerHome = tool 'mysonar'
+                    withSonarQubeEnv('mysonar') {
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=Php-App"
+                    }
+                }
+            }
+        }
+        stage('Image'){
+            steps{
+                sh 'docker build -t varadya143aradya/mybnkblood:db database'
+                sh 'docker build -t varadya143aradya/mybnkblood:app .'
+            }
+        }
+        stage('TrivyImageScan'){
+            steps{
+                sh 'trivy image varadya143aradya/mybnkblood:db'
+                sh 'trivy image varadya143aradya/mybnkblood:app'
+            }
+        }
+        stage('PushImageToRigistry'){
+            steps{
+                script{
+                    withDockerRegistry(credentialsId: 'Dockerhub-cred') {
+                        sh 'docker push varadya143aradya/mybnkblood:db'
+                        sh 'docker push varadya143aradya/mybnkblood:app'
+                    } 
+                }
+               
+            }
+        }
+        stage('Deploy'){
+            steps{
+                sh 'docker run -d --name mysqldb -p 3306:3306 varadya143aradya/mybnkblood:db'    //mysql will be hostname need to match in application congif.php
+                sh 'docker run -d --name myapp -p 1235:80 --link mysqldb:mysqlcon varadya143aradya/mybnkblood:app'
+            }
+        }
+    }
+}
